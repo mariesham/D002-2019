@@ -31,3 +31,26 @@ print("Oh, it takes me %d times to get a 6!!!" % count)
 
 
 
+from random import randint
+times=0
+a=[]
+while times<100:
+        count=0
+        number=randint(1,6)
+        while number!=6:
+                number = randint(1,6)
+                count = count + 1
+
+        count=count+1
+        print("Oh, it takes me %d trials to get a 6!!!" % count)
+        a.append(count)
+        times=times+1
+        continue
+while times==100:
+        b=sum(a)
+        print("The average is %f."%((sum(a))/100))
+        break
+
+
+
+
