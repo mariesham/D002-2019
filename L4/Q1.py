@@ -10,9 +10,7 @@ collection = ["Pikachu", "Bulbasaur", "Squirtle", "Nidoqueen"]
 newly_caught = ["Bulbasaur", "Kakuna", "Arbok", "Jigglypuff"]
 
 for i in newly_caught:
-    if i in collection: # your code here
-        collection.remove(i)
-    else:
+    if not i in collection: # your code here
         collection.append(i)
 
 print(collection) # should print ['Pikachu', 'Bulbasaur', 'Squirtle', 'Nidoqueen', 'Kakuna', 'Arbok', 'Jigglypuff']
