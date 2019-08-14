@@ -10,8 +10,10 @@ collection = ["Pikachu", "Bulbasaur", "Squirtle", "Nidoqueen"]
 newly_caught = ["Bulbasaur", "Kakuna", "Arbok", "Jigglypuff"]
 
 for i in newly_caught:
-    if ________________ : # your code here
-        collection_______________        # your code here
+    if i in collection: # your code here
+        collection.remove(i)
+    else:
+        collection.append(i)
 
 print(collection) # should print ['Pikachu', 'Bulbasaur', 'Squirtle', 'Nidoqueen', 'Kakuna', 'Arbok', 'Jigglypuff']
 
@@ -24,7 +26,13 @@ print(collection) # should print ['Pikachu', 'Bulbasaur', 'Squirtle', 'Nidoqueen
 
 hsi = [20000, 21000, 21500, 22125, 21015, 22013, 19942, 24500]
 change = []
-
+i=0
+while True:
+    x=hsi[i+1]-hsi[i]
+    change.append(x)
+    i=i+1
+    if i==7:
+        break
 # your code here
 
 print(change)  # should print [1000, 500, 625, -1110, 998, -2071, 4558]
@@ -36,60 +44,22 @@ print(change)  # should print [1000, 500, 625, -1110, 998, -2071, 4558]
 # If you press Down (D), it shows the previous channel. If you press Off (O), the
 # TV will explode and the program ends.
 
-channels = ["TVB", "CCTV", "VIU", "RTHK", "Netflix", "TBS", "KBS"]
 
-current_channel = 0
+channels = ["TVB", "CCTV", "VIU", "RTHK", "Netflix", "TBS", "KBS"]
+current_channel=0
 while True:
     print("You are now watching %s" % channels[current_channel])
     a = input("Please choose either Up/Down/Off\n")
-    if a == 'U':
-        # code
-    if a == 'D':
-        # code
+    if a[0] == 'u' or a[0]=='U':
+        current_channel=current_channel+1
+    if a[0]== 'D' or a[0]=='d':
+        current_channel=current_channel-1
     if a == 'O':
         break
     # may be some more code
 
 
 
-### Expected Result
-##You are now watching TVB
-##Please choose either Up/Down/Off
-##U
-##You are now watching CCTV
-##Please choose either Up/Down/Off
-##U
-##You are now watching VIU
-##Please choose either Up/Down/Off
-##U
-##You are now watching RTHK
-##Please choose either Up/Down/Off
-##D
-##You are now watching VIU
-##Please choose either Up/Down/Off
-##D
-##You are now watching CCTV
-##Please choose either Up/Down/Off
-##U
-##You are now watching VIU
-##Please choose either Up/Down/Off
-##D
-##You are now watching CCTV
-##Please choose either Up/Down/Off
-##D
-##You are now watching TVB
-##Please choose either Up/Down/Off
-##D
-##You are now watching KBS
-##Please choose either Up/Down/Off
-##D
-##You are now watching TBS
-##Please choose either Up/Down/Off
-##U
-##You are now watching KBS
-##Please choose either Up/Down/Off
-##U
-##You are now watching TVB
-##Please choose either Up/Down/Off
-##O
-##>>>
+
+
+
