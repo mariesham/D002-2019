@@ -64,9 +64,9 @@ while ((check(cells)) == False):
         print("Game Over")
         if xo%2==0:
             print("Player 1 wins!")
-        elif xo==9:
-            print("It's a tie. Restart the game.")
-            printcell(cells)
+        elif cells != '_':
+            print("It is a tie. Please restart the game.")
+            break
         else:
             print("Player 2 wins!")
             break
